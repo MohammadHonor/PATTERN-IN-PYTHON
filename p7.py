@@ -1,25 +1,10 @@
-# taking multiple input
+#  rectangle
+row,col=map(int,input("Enter rows and colums seperated by commas").split(','))
 
-
-# using split()
-
-
-x,y = input("Enter two values:").split(',')
-
-#taking input at time
-
-print("first number is {} and second number is {}".format(x,y))
-
-
-# using map() with split
-
-num1,num2=map(int,input("Enter a two number by comma seperated").split(","))
-
-print("first number is {} and second number is {}".format(num1,num2))
-
-# using list comprehension
-
-num1,num2=[int(x) for x in input("Enter a two number by comma seperated").split(",")]
-
-print("first number is {} and second number is {}".format(num1,num2))
-
+for i in range(1,row+1):
+    for j in range(1,col+1):
+        if i==1 or i==row or j==1 or j==col:
+            print("*",end="")
+        else:
+            print(" ",end="")
+    print()         
